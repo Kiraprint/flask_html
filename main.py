@@ -12,6 +12,13 @@ def base(title):
 def training(prof):
     return render_template('training.html', prof=prof, img=url_for('static', filename='img/scheme.png'))
 
+@app.route('/answer')
+@app.route('/answer_auto')
+def answer():
+    params = {'title': 'Анкета', 'surname': 'Watny', 'name': 'Mark', 'education': 'выше среднего',
+              'profession': 'штурман марсохода', 'sex': 'male', 'motivation': 'Всегда мечтал застрять на Марсе!',
+              'ready': True}
+    return render_template('auto_answer.html', **params)
 
 @app.route('/list_prof/<key>')
 def list_prof(key):
