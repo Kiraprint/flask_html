@@ -1,19 +1,56 @@
-form.login_form {
+.tobe_grey {
+    margin-top: 25px;
+    color: darkgray;
+    padding-left: 20px;
+}
+
+.answer {
+    margin-top: 25px;
+    margin-left: 5%;
+    font-size: 24px;
+    line-height: normal;
+}
+
+.form-elements {
+    margin-left: 5%;
+}
+
+.distribution {
+    margin-left: 10%;
+    margin-top: 25px;
+}
+
+th {
+    background-color: lightgray;
+    color: black;
+}
+
+table {
     margin-left: auto;
-    margin-right: auto;
-    max-width: 450px;
-    background-color: #ffdab9;
-    border: 1px solid gray;
-    border-radius: 5px;
-    padding: 10px;
+    margin-right: auto
 }
 
-div .form-group {
-    margin-top: 15px;
+.table-mars {
+    text-align: center;
 }
-
 
 .carousel {
+    margin-right: auto;
+    margin-left: auto;
     max-width: 50%;
     min-height: 50%;
+}
+
+.image-form {
+    margin-left: 30%;
+}
+
+.crew-info {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.crew-image {
+    height: auto;
 }
