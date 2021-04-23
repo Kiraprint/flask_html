@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+{% extends "base.html" %}
+
+{% block content %}
+
+<div style="text-align: center">
+	{% if "инженер" in prof or "строитель" in prof%}
+	    <h2>Инженерные тренажеры</h2>
+	{% else %}
+	    <h2>Научные симуляторы</h2>
+	{% endif %}
+	<img src={{ img }} alt="smth is wrong" width="50%" height="50%">
+</div>
+
+{% endblock %}
+</body>
+</html>
