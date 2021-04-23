@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="table-mars">
+    <h2>Оформление каюты</h2>
+    <table>
+        <tr>
+            <th>Цвет стен</th>
+            <th>Эмблема</th>
+        </tr>
+        <tr>
+            {% if age < 21 and gender == 'female' %}
+            <td style="background-color: pink" width="500px" height="500px">
+            </td>
+            <td>
+                <img width="500px" height="500px" src={{ url_for('static', filename='img/alien_kid.jpg') }}>
+            </td>
+
+            {% elif age < 21 and gender == 'male' %}
+            <td style="background-color: deepskyblue" width="500px" height="500px">
+            </td>
+            <td>
+                <img width="500px" height="500px" src={{ url_for('static', filename='img/alien_kid.jpg') }}>
+            </td>
+            {% elif age >= 21 and gender == 'female' %}
+            <td style="background-color: darkorange" width="500px" height="500px">
+            </td>
+            <td>
+                <img width="500px" height="500px" src={{ url_for('static', filename='img/alien_adult.jpg') }}>
+            </td>
+            {% elif age >= 21 and gender == 'male' %}
+            <td style="background-color: black" width="500px" height="500px">
+            </td>
+            <td>
+                <img width="500px" height="500px" src={{ url_for('static', filename='img/alien_adult.jpg') }}>
+            </td>
+            {% endif %}
+        </tr>
+    </table>
+</div>
+
+{% endblock %}
+
+</body>
+</html>
