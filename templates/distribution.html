@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+</head>
+<body>
+
+{% extends "base.html"%}
+
+{% block content%}
+
+<div class="distribution">
+	<h2 style="margin-left: 5%">Размещение по каютам</h2>
+
+    {% set cab = "Каюта №" %}
+	{% for man in list %}
+
+	{% if loop.first %}
+	<p>{{ man }} - {{cab}}  {{ loop.index }} - капитан корабля</p>
+	{% else %}
+		<p>{{ man }} - {{cab}} {{ loop.index }}</p>
+	{% endif %}
+
+	{% endfor %}
+
+</div>
+
+{% endblock %}
+</body>
+</html>
